@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 body {
@@ -10,6 +10,15 @@ body {
   color: white;
   margin: 0 auto;
   padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color: #44c219;
 }
 
 .container {
@@ -39,6 +48,8 @@ body {
 .hero {
   display: flex;
   justify-content: space-between;
+  padding: 2rem 0;
+  min-height: 400px;
 }
 
 .intro {
@@ -52,10 +63,15 @@ body {
 
 .title {
   font-size: 3rem;
+  padding: 0;
+  margin: 0;
+  min-height: 65px;
 }
 
 .description {
   font-size: 1.5rem;
+  min-height: 100px;
+  max-width: 545px;
 }
 
 .cast {
@@ -63,4 +79,20 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-bottom: 2rem;
+}
+
+.actors {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+}
+
+.actors img {
+  width: 175px;
+  height: 200px;
+}
+
+.actor {
+ text-align: center;
 }
