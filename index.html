@@ -72,14 +72,15 @@
           </div>
         </div>
 
-        <button aria-label="Previous" class="glider-prev">«</button>
-        <button aria-label="Next" class="glider-next">»</button>
+        <!-- <button aria-label="Previous" class="glider-prev">«</button>
+        <button aria-label="Next" class="glider-next">»</button> -->
         <div role="tablist" class="dots" id="dots"></div>
       </div>
     </section>
     <section class="watch-now" id="watch-now">
       <a href="https://www.google.com/search?q=where+to+watch+the+matrix+1999&rlz=1C5CHFA_enIN1038IN1038&oq=where+to+watch+The+Matrix+1999&aqs=chrome.0.0i512j0i390l2.13830j1j7&sourceid=chrome&ie=UTF-8" target="_blank">WATCH NOW</a>
     </section>
+    <section class="copyright"><h5>Copyright © Gautam Gupta 2023</h5></section>
   </div>
   <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
   <script src="glider-js/glider.js"></script>
@@ -104,12 +105,7 @@
       new Glider(document.querySelector('.glider'), {
         slidesToShow: 1,
         dots: '#dots',
-        draggable: true,
-        duration: 1,
-        arrows: {
-          prev: '.glider-prev',
-          next: '.glider-next'
-        }
+        draggable: true
       })
     })
   </script>

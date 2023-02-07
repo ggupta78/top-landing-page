@@ -162,3 +162,10 @@ nav {
 .glider-dot:hover {
   background: #44c219 !important;
 }
+
+.copyright {
+  height: 60px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
