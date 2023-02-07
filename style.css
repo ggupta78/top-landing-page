@@ -4,6 +4,7 @@
 }
 
 body {
+  background-image: url('images/matrix-background.jpeg');
   background-color: black;
   font-family: 'Roboto Mono', monospace;
   font-size: 16px;
