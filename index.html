@@ -9,19 +9,20 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="glider-js/glider.css">
 </head>
 <body>
   <div class="container">
-    <nav class="header">
+    <nav class="header" id="header">
       <img class="logo" src="images/813a51d58c8e1ad76529f777e94f295a.png" alt="">
       <ul class="links">
-        <li>About</li>
-        <li>Cast</li>
-        <li>Quotes</li>
-        <li>Watch</li>
+        <li><a href="#hero">About</a></li>
+        <li><a href="#cast">Cast</a></li>
+        <li><a href="#quotes">Quotes</a></li>
+        <li><a href="#watch-now">Watch</a></li>
       </ul>
     </nav>
-    <section class="hero">
+    <section class="hero" id="hero">
       <div class="intro">
         <h1 class="title"></h1>
         <div class="description"></div>
@@ -30,28 +31,60 @@
         <iframe width="560" height="315" src="https://www.youtube.com/embed/vKQi3bBA1y8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
     </section>
-    <section class="cast">
+    <section class="cast" id="cast">
       <h2>Cast</h2>
       <div class="actors">
         <div class="actor">
-          <img src="images/the-matrix-4-keanu-reeves-neo.jpg" alt="Neo">
-          <div class="name">Neo</div>
+          <a target="_blank" href="https://www.imdb.com/title/tt0133093/characters/nm0000206?ref_=tt_cl_c_1">
+            <img src="images/the-matrix-4-keanu-reeves-neo.jpg" alt="Neo">
+            <div class="name">Neo</div>
+          </a>
         </div>
         <div class="actor">
-          <img src="images/Morpheus-Matrix-Laurence-Fishburne-a.jpg" alt="Morpheus">
-          <div class="name">Morpheus</div>
+          <a target="_blank" href="https://www.imdb.com/title/tt0133093/characters/nm0000401?ref_=tt_cl_c_2">
+            <img src="images/Morpheus-Matrix-Laurence-Fishburne-a.jpg" alt="Morpheus">
+            <div class="name">Morpheus</div>
+          </a>
         </div>
         <div class="actor">
-          <img src="images/trinity.gif" alt="Trinity">
-          <div class="name">Trinity</div>
+          <a target="_blank" href="https://www.imdb.com/title/tt0133093/characters/nm0005251?ref_=tt_cl_c_3">
+            <img src="images/trinity.gif" alt="Trinity">
+            <div class="name">Trinity</div>
+          </a>
         </div>
       </div>
     </section>
-    <section class="quotes"></section>
-    <section class="watch"></section>
+    <section class="quotes" id="quotes">
+      <h2>Quotes</h2>
+      <div class="glider-container">
+        <div class="glider">
+          <div class="slide-item">
+            <div class="quote">"How About I Give You The Finger, And You Give Me My Phone Call."</div>
+            <div class="quote-by">- Neo</div>
+          </div>
+          <div class="slide-item">
+            <div class="quote">"Remember...All I'm Offering Is The Truth. Nothing More."</div>
+            <div class="quote-by">- Morpheus</div>
+          </div>
+          <div class="slide-item">
+            <div class="quote">"The Matrix Cannot Tell You Who You Are."</div>
+            <div class="quote-by">- Trinity</div>
+          </div>
+        </div>
+
+        <button aria-label="Previous" class="glider-prev">«</button>
+        <button aria-label="Next" class="glider-next">»</button>
+        <div role="tablist" class="dots" id="dots"></div>
+      </div>
+    </section>
+    <section class="watch-now" id="watch-now">
+      <a href="https://www.google.com/search?q=where+to+watch+the+matrix+1999&rlz=1C5CHFA_enIN1038IN1038&oq=where+to+watch+The+Matrix+1999&aqs=chrome.0.0i512j0i390l2.13830j1j7&sourceid=chrome&ie=UTF-8" target="_blank">WATCH NOW</a>
+    </section>
   </div>
   <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+  <script src="glider-js/glider.js"></script>
   <script>
+    // TypeIt setup
     new TypeIt(".title", {
       strings: "What is the Matrix?",
       cursor: false,
@@ -65,6 +98,20 @@
         }).go();
       }
     }).go();
+
+    // Glider.js setup
+    window.addEventListener('load', function(){
+      new Glider(document.querySelector('.glider'), {
+        slidesToShow: 1,
+        dots: '#dots',
+        draggable: true,
+        duration: 1,
+        arrows: {
+          prev: '.glider-prev',
+          next: '.glider-next'
+        }
+      })
+    })
   </script>
 </body>
 </html>

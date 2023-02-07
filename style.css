@@ -26,6 +26,12 @@ a:hover {
   margin: 0 auto;
 }
 
+nav {
+  position: sticky;
+  top:0;
+  background-color: black;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -95,4 +101,64 @@ a:hover {
 
 .actor {
  text-align: center;
+}
+
+.quotes {
+  min-height: 300px;
+  width: 60%;
+  margin: auto;
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.slide-item {
+  min-height: 200px;
+  margin: auto;
+}
+
+.glider-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.quote {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #44c219;
+}
+
+.quote-by {
+  font-size: 1.2rem;
+  color: #44c219;
+}
+
+.watch-now {
+  padding: 4rem 0;
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}
+
+.watch-now a {
+  height: 50px;
+  width: 200px;
+  padding: 0.75rem 1.5rem;
+  border-radius: 1.5rem;
+  background-color: #44c219;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.watch-now a:hover {
+  background-color: white;
+  color: #44c219;
+}
+
+.glider-dot:hover {
+  background: #44c219 !important;
 }
